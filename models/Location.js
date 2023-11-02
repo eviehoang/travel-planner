@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Location extends Model {}
 
-Driver.init(
+Location.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,10 +12,6 @@ Driver.init(
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    address: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -29,4 +25,4 @@ Driver.init(
   }
 );
 
-module.exports = Driver;
+module.exports = Location;
