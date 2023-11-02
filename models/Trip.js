@@ -1,7 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Trip extends Model { }
+class Trip extends Model { 
+    get formattedTripBudget(){
+        return `$${(this.trip_budget / 100).toFixed(2)}`;
+    }
+}
 
 Trip.init(
     {
